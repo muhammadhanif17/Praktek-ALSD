@@ -5,7 +5,7 @@ public class MahasiswaDemo14 {
         Scanner sc = new Scanner(System.in);
 
         //input jumlah mahasiswa
-        System.out.println("Masukkan jumlah mahasiswa: ");
+        System.out.print("Masukkan jumlah mahasiswa: ");
         int jml = sc.nextInt();
         sc.nextLine();
         

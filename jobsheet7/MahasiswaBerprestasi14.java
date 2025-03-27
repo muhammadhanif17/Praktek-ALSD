@@ -91,10 +91,20 @@ public class MahasiswaBerprestasi14 {
             mid = (left + right)/2;
             if (cari == listMhs[mid].ipk) {
                 return mid;
-            }else if(listMhs[mid].ipk > cari){
-                return binarySearch(cari, left, mid-1);
-            }else{
-                return binarySearch(cari, mid+1, right);
+            }
+            //Periksa apakah data dalam urutan besar ke kecil(DESC)
+            if (listMhs[left].ipk > listMhs[right].ipk) {
+                if(listMhs[mid].ipk < cari){
+                    return binarySearch(cari, left, mid-1);
+                }else{
+                    return binarySearch(cari, mid+1, right);
+                }
+            }else{ //Jika data dalam urutan kecil ke besar(ASC)
+                if(listMhs[mid].ipk > cari){
+                    return binarySearch(cari, left, mid-1);
+                }else{
+                    return binarySearch(cari, mid+1, right);
+                }
             }
         }
         return -1;

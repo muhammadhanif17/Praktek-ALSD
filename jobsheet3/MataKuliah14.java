@@ -10,14 +10,6 @@ public class MataKuliah14 {
 
     }
 
-    //Konstruktor berparameter
-    public MataKuliah14(String kode, String nama, int sks, int jumlahJam){
-        this.kode = kode;
-        this.nama = nama;
-        this.sks = sks;
-        this.jumlahJam = jumlahJam;
-    }
-
     void tambahData(){
         Scanner sc = new Scanner(System.in);
         String dummy;
